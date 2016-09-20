@@ -1,5 +1,7 @@
 body {
-  background-image: url("http://static1.squarespace.com/static/53b4d49de4b00894c69c7a0c/t/53f55bdde4b0a95765d3ec7f/1408588765988/Mint+Watercolor+Wallpaper_Pixejoo.jpg");
+  /*background-image: url("http://static1.squarespace.com/static/53b4d49de4b00894c69c7a0c/t/53f55bdde4b0a95765d3ec7f/1408588765988/Mint+Watercolor+Wallpaper_Pixejoo.jpg");*/
+  /*background-image: url("http://www.huangyao.org/assets/images/presentations/pow_ss_about/ss_about_3.jpg");*/
+  background-image: url("http://i01.i.aliimg.com/wsphoto/v0/972391607/Chinese-painting-Artist-Oriental-asian-traditional-Landscape-painting-brush-painting-rice-paper-office-decoration-Fengshui.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -7,32 +9,52 @@ body {
   justify-content: center;
 }
 
+img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+
 header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  color: #2F2C2F;
 
 }
 
 #table{
+  background-image: url("http://www.pptback.com/uploads/old-beige-blank-paper-backgrounds-powerpoint.jpg");
   background-color: #DCA74C;
-  height: 400px;
-  width: 600px;
+  height: 450px;
+  width: 650px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border:
+  border-radius: 25px;
 }
 
 #indexCard{
   background-color: white;
   height: 250px;
   width: 350px;
-  margin: 0px 50px 0px 50px;
+  margin: 25px 0px 25px 00px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-radius: 25px;
 }
 
 #cardText{
@@ -57,6 +79,7 @@ header{
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  opacity: .9;
 }
 
 
