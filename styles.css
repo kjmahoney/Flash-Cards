@@ -1,0 +1,16 @@
+#indexCard{
+  background-color: pink;
+}
+
+#startButton{
+  background-color: red;
+  width: 200px;
+  height: 200px;
+}
+
+
+#nextButton{
+  background-color: green;
+  width: 200px;
+  height: 200px;
+}
