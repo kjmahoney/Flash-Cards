@@ -17,8 +17,6 @@ squirrel
 dog
 cat
 
-
-
 3. startButton{
   create counter
   i = 0
@@ -100,12 +98,15 @@ bronze
 flip card
 user can mark right or wrong x vs y
 keeps score
-user can input their own words
+
+update styling.
+need index card
 
 silver
 1. view correct words without restarting
 1. Flashy and jazzy
 1. Quiz mode and review mode
+1. user can input their own words
 
 Gold
 1. Can switch between translations

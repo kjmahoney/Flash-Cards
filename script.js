@@ -1,14 +1,14 @@
-var toLearn = [  //Represents a deck of flash cards
-['狮子','lion','Shīzi'],
-['斑马','zebra','Bānmǎ'],
-['象','elephant','Xiàng'],
-['鬣狗','hyena','Liègǒu'],
-['犀牛','rhino','Xīniú'],
-['河马','hippo','Hémǎ'],
-['长颈鹿','giraffe','asdf'],
-['鳄鱼','crocodile','èyú'],
-['大猩猩','gorilla','dà xīngxīng'],
-['黑猩猩','chimpanzee','hēixīngxīng']
+var toLearn = [
+['狮子','Lion','Shīzi'],
+['斑马','Zebra','Bānmǎ'],
+['象','Elephant','Xiàng'],
+['鬣狗','Hyena','Liègǒu'],
+['犀牛','Rhino','Xīniú'],
+['河马','Hippo','Hémǎ'],
+['长颈鹿','Giraffe','asdf'],
+['鳄鱼','Crocodile','èyú'],
+['大猩猩','Gorilla','dà xīngxīng'],
+['黑猩猩','Chimpanzee','hēixīngxīng']
 ]
 
 var learned = []
@@ -17,24 +17,30 @@ var questionBox = $('#indexCard').children().eq(0) //sets variables to be used t
 var i = 0 //moves vertically through the deck (new cards)
 var h = 0 //moves horizontally through the deck (flip the card)
 
+var score = 0
+var scoreBoard = $('header').children().eq(1)
+var maxScore = toLearn.length
+
 $('#startButton').on("click", startCards) //introduces the first card
-function startCards() {
+function startCards(){
   var output = toLearn[i][h]
   console.log(output);
   console.log(i)
   questionBox.text(output);
+  scoreBoard.text(score + "/" + maxScore)
 }
 
-$('#nextButton').on("click", nextCard)
 function nextCard() {
   i = i + 1 //Need if statement in case i is too high
-    if (i>=toLearn.length){
+    if (i >= toLearn.length){
       i = 0
+    }
+    if (toLearn.length <= 0){ //if user has learned all cards
+      alert("Congrats you have mastered this deck!")
     }
   h = 0
   var output = toLearn[i][h]
   questionBox.text(output);
-  console.log(i)
 }
 
 function previousCard() {
@@ -42,7 +48,7 @@ function previousCard() {
     if (i< 0){
        i = (toLearn.length-1)
     }
-
+  }
 
 $(document).keydown(function(e) { //This section allows you to flip the card
     if(e.which == 40 || e.which == 38 ) {
@@ -56,24 +62,32 @@ $(document).keydown(function(e) { //This section allows you to flip the card
 });
 
 $(document).keypress(function(e) { //This section allows you to flip the card
-      if(e.which == 89 || e.which ==121) {
+      if(e.which == 89 || e.which ==121) { //if the user knows the answer
       alert("correct");
       learned.push(toLearn[i])
       toLearn.splice(i,1)
+          if (score < 10){ //if score is not 10, the user continues play
+            score = score + 1
+            scoreBoard.text(score + "/" + maxScore)
+            nextCard()
+          }else { //Victory condition
+            score = 10
+            scoreBoard.text(score + "/" + maxScore)
+            alert("Congrats! you have mastered this deck!")
+      }
      }
-      if(e.which == 88 || e.which ==120) { //Need to insert array manipulation
+      if(e.which == 88 || e.which ==120) { //if user is incorrect
       alert("incorrect");
      }
-
 })
 
-$(document).keydown(function(e) { //right arrow key
+$(document).keydown(function(e) { //right arrow key to next card
     if(e.which == 39) {
         nextCard()
     }
 });
 
-$(document).keydown(function(e) { //right arrow key
+$(document).keydown(function(e) { //left arrow key to previous card
     if(e.which == 37) {
         previousCard()
     }
@@ -87,9 +101,8 @@ function previousCard() {
   h = 0
   var output = toLearn[i][h]
   questionBox.text(output);
-  console.log(i)
-  console.log(toLearn)
 }
+
 
 
 

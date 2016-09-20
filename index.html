@@ -8,13 +8,48 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   </head>
   <body>
-    <div id ='indexCard'>
-      <p>Display</p>
-    </div>
 
-    <button id = "startButton">Start</button>
-    <button id = "nextButton">Next</button>
-    <input></input>
+    <header>
+      <h2>Flash Cards</h2>
+      <h3>Score</h3>
+    </header>
+
+    <main>
+        <div id = "table">
+
+            <div id = "messageBox"></div>
+
+            <div id ='indexCard'>
+                <p id ='cardText'>Click start to begin</p>
+            </div>
+
+            <button id = "startButton">Start</button>
+
+        </div>
+
+     <div id = "bottomItems">
+       <div id = "flipCards">
+         <div id = 'arrow-up'></div>
+         <p>Arrow to flip cards</p>
+         <div id = 'arrow-down'></div>
+       </div>
+       <div id = 'answerBox'>
+         <p>Y = I know it!</p>
+         <p>X = I don't know it : (</p>
+       </div>
+
+
+       <div id = "nextCard">
+         <div id = 'arrow-left'></div>
+         <p>Arrow to navigate cards</p>
+         <div id = 'arrow-right'></div>
+       </div>
+     </div>
+</main>
+
+    <footer>
+    </footer>
+
   <script src="script.js" charset="UTF-8"></script>
   </body>
 </html>
