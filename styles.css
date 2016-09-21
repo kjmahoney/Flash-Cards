@@ -175,4 +175,13 @@ footer{
 h4{
   margin-top: 50px;
   color: #B71000;
+  font-family: fantasy;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
 }
