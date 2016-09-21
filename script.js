@@ -22,7 +22,6 @@ var learned = []//Cards moved from toLearned to learned once mastered by user
 var questionBox = $('#indexCard').children().eq(0) //Represents the flash card
 var i = 0 //counter that moves vertically through the deck (new cards)
 var h = 0 //counter that moves horizontally through the deck (flip the card)
-
 var score = 0 //Stores number of mastered cards
 var scoreBoard = $('#table').children().eq(1) //Represents the scoreboard
 var maxScore = toLearn.length //maximum acievable score based on number of cards
@@ -39,6 +38,7 @@ function startCards(){
   questionBox.text(output);
   scoreBoard.text(score + "/" + maxScore)
 }
+
 //Next Card Function**********
 function nextCard() { //functionality for when the next card is called via arrow or a 'correct' answer
   i = i + 1
@@ -78,6 +78,7 @@ $(document).keydown(function(e) { //Keying up or down flips the card by moving t
         questionBox.text(output);
       }
 });
+
 //Y and N Keys**********
 $(document).keypress(function(e) { //Keying 'Y' triggers 'correct', removes the card from the toLearn deck and into the 'learned' deck
       if(e.which == 89 || e.which ==121) { //if the user knows the answer the score is updated and moves to next card
