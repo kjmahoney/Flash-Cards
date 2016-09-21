@@ -17,8 +17,8 @@ var questionBox = $('#indexCard').children().eq(0) //sets variables to be used t
 var i = 0 //moves vertically through the deck (new cards)
 var h = 0 //moves horizontally through the deck (flip the card)
 
-var score = 0
-var scoreBoard = $('header').children().eq(1)
+var score = 0 //Prepares the scoreboard
+var scoreBoard = $('#table').children().eq(1)
 var maxScore = toLearn.length
 
 $('#startButton').on("click", startCards) //introduces the first card
@@ -37,6 +37,7 @@ function nextCard() {
     }
     if (toLearn.length <= 0){ //if user has learned all cards
       alert("Congrats you have mastered this deck!")
+      questionBox.text("Congrats!");
     }
   h = 0
   var output = toLearn[i][h]
@@ -63,7 +64,7 @@ $(document).keydown(function(e) { //This section allows you to flip the card
 
 $(document).keypress(function(e) { //This section allows you to flip the card
       if(e.which == 89 || e.which ==121) { //if the user knows the answer
-      alert("correct");
+      alert("Great!");
       learned.push(toLearn[i])
       toLearn.splice(i,1)
           if (score < 10){ //if score is not 10, the user continues play
@@ -73,11 +74,10 @@ $(document).keypress(function(e) { //This section allows you to flip the card
           }else { //Victory condition
             score = 10
             scoreBoard.text(score + "/" + maxScore)
-            alert("Congrats! you have mastered this deck!")
       }
      }
       if(e.which == 88 || e.which ==120) { //if user is incorrect
-      alert("incorrect");
+      alert("The card will remain in the deck");
      }
 })
 
@@ -102,17 +102,3 @@ function previousCard() {
   var output = toLearn[i][h]
   questionBox.text(output);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-//change css class

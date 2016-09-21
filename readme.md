@@ -99,10 +99,8 @@ flip card
 user can mark right or wrong x vs y
 keeps score
 
-update styling.
-need index card
-
 silver
+1. Drop menu 
 1. view correct words without restarting
 1. Flashy and jazzy
 1. Quiz mode and review mode

@@ -20,6 +20,7 @@ img {
 
 
 header{
+  margin: 0px 0px 10px 00px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,13 +29,26 @@ header{
 
 p {
   color: #2F2C2F;
+  font-family: fantasy;
+  font-style: oblique;
+}
 
+h3{
+  color: white;
+  font-family: fantasy;;
+}
+
+h2{
+  color: black;
+  text-shadow: 2px 1px #B88F78;
+  font-family: fantasy;
+  font-size: 28px;
 }
 
 #table{
   background-image: url("http://www.pptback.com/uploads/old-beige-blank-paper-backgrounds-powerpoint.jpg");
   background-color: #DCA74C;
-  height: 450px;
+  height: 500px;
   width: 650px;
   display: flex;
   flex-direction: column;
@@ -42,13 +56,14 @@ p {
   justify-content: center;
   text-align: center;
   border-radius: 25px;
+  opacity: .9;
 }
 
 #indexCard{
   background-color: white;
   height: 250px;
   width: 350px;
-  margin: 25px 0px 25px 00px;
+  margin: 0px 0px 10px 00px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,14 +77,23 @@ p {
   margin: auto;
   color: black;
   font-size: 36px;
+  font-family: cursive;
 }
 
 #startButton{
+  font-family: cursive;
+  color: white;
+  font-size: 16px;
   width: 200px;
-  background-color: red;
+  background-color: #252525;
   height: 50px;
-  margin: 0px 0px 0px 0px
+  margin: 15px 0px 0px 0px
 }
+
+#startButton:hover {
+  background-color: #BAB3B0;
+}
+
 
 #bottomItems {
   /*background-color: #5CADF1;*/
@@ -107,16 +131,17 @@ p {
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: 20px solid #f00;
+  border-bottom: 20px solid #C30000 ;
   margin: auto;
 }
 
 #arrow-down {
+  margin: 20px 0px 20px 00px;
   width: 0;
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-top: 20px solid #f00;
+  border-top: 20px solid #C30000;
   margin: auto;
 }
 
@@ -125,7 +150,7 @@ p {
   height: 0;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-left: 20px solid white;
+  border-left: 20px solid #C30000;
 }
 
 #arrow-left {
@@ -133,5 +158,6 @@ p {
   height: 0;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-right:20px solid white;
+  border-right:20px solid #C30000;
+  margin: 25px 5px 25px 5px;
 }
