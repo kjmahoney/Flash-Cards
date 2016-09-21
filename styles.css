@@ -161,3 +161,18 @@ h2{
   border-right:20px solid #C30000;
   margin: 25px 5px 25px 5px;
 }
+
+footer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: right;
+  margin: 25px 25px 0px 0px;
+}
+
+h4{
+  margin-top: 50px;
+  color: #B71000;
+}

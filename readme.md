@@ -100,7 +100,7 @@ user can mark right or wrong x vs y
 keeps score
 
 silver
-1. Drop menu 
+1. Drop menu (when hover over instructions, instructions show up)
 1. view correct words without restarting
 1. Flashy and jazzy
 1. Quiz mode and review mode
