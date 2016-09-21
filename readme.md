@@ -1,189 +1,60 @@
- technologies used,
- the approach taken,
- installation instructions,
- unsolved problem
+--READ ME v 1.0
 
-bronze
+INSTRUCTIONS:
 
-1. create var flashCards {  *pull attributes from array*
-    lion : [chinese, english]
-    giraffe: [chinese, english]
-    gorilla: [chinese, english]
-  }
+Click Start to begin the flash cards
 
-  create var knowncards {}
+Up/Down arrows flip the cards
 
-squirrel
-dog
-cat
+Left/Right arrows cycle through the cards
 
-3. startButton{
-  create counter
-  i = 0
-4. Presented card
-  output = flashCards[i]
+When on a card, use 'Y' to indicate that you have mastered the card. Once mastered, it will be removed from the deck. Press X to indicate that you are not familiar with a card and it will remain in the deck.
 
-  up and down arrow to flip card
-  onKeyDown and onKeyUP
+Once all cards are mastered, the session will end. Refresh to try again.
 
-  onKeyUP or KeyDown
-  {
-    flip card *write logic*
-    messageBox displays "Correct or incorrect?"
-  }
+INSTALLATION:
+
+This game is designed to run in your browser
 
 
-  key listener y v x
-  if right {
-  score counter + 1
-  the card is taken out of rotation (move to another array)
-  the cardStatus div turns green! and statusBox reads correct!
+TECHNOLOGIES USED:
+
+This site was built using javascript and jQuery and styled in CSS.
+
+METHODOLOGY:
+
+This game is array based. Arrays are used to represent decks of cards. The quiz cards are pulled from the 'toLearn' array. When a card is mastered, the script moves the card to the 'learned' array. Future releases will allow the user to review cards in the 'learned' array. Additional script provides functionality to scroll through cards, a victory condition, and score-keeping.
+
+PROBLEMS ENCOUNTERED:
+
+There primary existing issue occurs once a user masters all cards in the deck. The user can no longer interact with the cards. The solution will be to include a reset button and an ability to review 'learned' cards.
+
+The primary problem is the limitation of the card input, which limits the utility of this game. By creating an 'add card' button a user will be able to place cards in the deck one at a time. However, the long-term goal is to allow users to import large amounts of cards via csv file. This will also require local memory so that a user can leave a session and resume after refreshing their browser.
 
 
-  if wrong
-  it stays in rotation (three css classes untested, right and wrong)
-  the card is taken out of rotation (move to another array)
-  the cardStatus div turns green! and statusBox reads correct!
+FUTURE RELEASES:
 
-delete thisIsObject[key];
+This is the base version of the game. Future goals include the following features:
 
-correctCard
-toLearn.pop("correctCard")
-learned.push("correctCard");
-
-
-
-
-  $(document).keypress(function(e) { //Y = 121
-      if(e.which == 88 || e.which ==120) {
-          alert('You pressed X!');
-      }
-  });
-
-  5. User click right arrow to go to next card  
-
-  right arrow indexCard = array + 1
-  left arrow index card = array - 1
-
-*SILVER*
-
-  1. var userAddCard = input
-     flashCards.push
-     *add clear list option*
-
-  2. Input field in quiz mode
+1. Functionality for the user to add cards to the deck
+2. Functionality for the score to be saved between sessions
+3. Functionality for arrays to be imported via csv file
+4. Images for pre-loaded cards
+5. Install a quiz mode
+6. Install a review mode
+7. Include pinyin pronunciation
+8. User can switch between English to Chinese and vice versa
+9. Hide instructions in a drop menu for a cleaner presentation
+10. Card animation
+11. Reset button
+12.
 
 
-*GOLD*
-
-
-
-hippo:[]
-giraffe:[]
-crocodile:[]
-gorilla:[]
-chimpanzee:[]
-cheetah:[]
-baboon:[]
-wildebeest:[]
-crane:[]
-warthog:[]
-meercat:[]
-monkey:[]
-ostrich:[]
-flamingo:[]
-gazelle:[]
-
-bronze
-flip card
-user can mark right or wrong x vs y
-keeps score
-
-silver
-1. Drop menu (when hover over instructions, instructions show up)
-1. view correct words without restarting
-1. Flashy and jazzy
-1. Quiz mode and review mode
-1. user can input their own words
-
-Gold
-1. Can switch between translations
-2. Keeps score after refresh
-3. Leaderboard
-
-Platinum
-1. Can choose what goes on front vs back
-
-
-
-// var toLearn = {
-// lion:['狮子','lion','Shīzi'],
-// zebra:['斑马','zebra','Bānmǎ'],
-// elephant:['象','elephant','Xiàng'],
-// hyena: ['鬣狗','hyena','Liègǒu'],
-// rhino: ['犀牛','rhino','Xīniú']
-// }
-
-
-$(document).keydown(function(e) {
-    if(e.which == 39) {
-        alert('You pressed right  arrow!');
-    }
-});
-
-$(document).keydown(function(e) {
-    if(e.which == 37) {
-        alert('You pressed left arrow!');
-    }
-});
-
-
-$(document).keydown(function(e) {
-    if(e.which == 40) {
-        alert('You pressed down arrow!');
-    }
-});
-
-$(document).keypress(function(e) { //Y = 121
-    if(e.which == 88 || e.which ==120) {
-        alert('You pressed X!');
-    }
-});
-
-$(document).keypress(function(e) { //Y = 121
-    if(e.which == 89 || e.which ==121) {
-        alert('You pressed Y!');
-    }
-});
-
-
- MVP Minimum Viable Product
-
-T&T(4m)
-
-With what we've talked about, discuss with your neighbor what you think we mean by minimum viable product.
-Honestly there's alot of different meanings for minimum viable product. I like this video alot
-
-So what does MVP mean in this class? It's not so different. Build something that works(sorta), that you can get feedback from, and subsequently iterate on.
-
-For the scope of this course. Think of a bronze, silver and gold model. Silver is really what you're trying to make. But if you fall short on time you have your bronze you can fall back on. If you don't have enough to do, you could go to your gold model. Your MVP should be on that bronze/silver line..... ish
-
-User Stories, how do we figure out our MVP?
-
-In order to work towards our MVP developers write user stories. User stories are essentially small granular features for your application.
-
-User stories have:
-
-role
-goal
-reason
-As a <role> I should be able to <goal> so that <reason>
-
-User stories should be granular and succinct.
-
-good user story
-
-As a user, I should be able to message other users so that I can communicate with my family
-bad user story
-
-This app should have a really good social networking engine.
+USER STORIES
+1. As a user, I should be able to evaluate whether or not I know the translation of a character
+2. As a user, I should be able to eliminate the cards that I have mastered in order to isolate those I'm not familiar with
+3. As a user, I should be able to keep a score of the cards I've mastered in a session in order to track my progress
+4. As a user, I should be able to navigate easily between cards, so I can come back to those I'm not familiar with
+5. As a user, I should be able to add cards to the deck so that I can customize my quizzes
+5. As a user, I should be able to bulk load cards so that I can conveniently input large decks of cards --Not Met
+7. As a user, I should be able to save my score between sessions, so that I can quiz myself on large decks of cards --Met
