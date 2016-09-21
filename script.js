@@ -17,7 +17,7 @@ var toLearn = [ //Cards presented to user
 //Mastered Deck*********
 var learned = []//Cards moved from toLearned to learned once mastered by user
 
-//**********Stored Variables**********
+//**********STORED VARIABLES**********
 
 var questionBox = $('#indexCard').children().eq(0) //Represents the flash card
 var i = 0 //counter that moves vertically through the deck (new cards)
